@@ -39,9 +39,6 @@ static void dis_r(unsigned long data)
   unsigned long code3 = (data >> 3) & 0x7;
   unsigned long code4 = (data >> 0) & 0x7;
 
-#ifdef debug
-  printf("%d %d\n", code3, code4);
-#endif
   switch(code3){
   case 0:
     switch(code4){
