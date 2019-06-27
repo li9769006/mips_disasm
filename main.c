@@ -5,18 +5,17 @@
 #include  <string.h>
 
 const char *reg[32] = {
-  "zero", "at", "v0", "v1", "a0", "a1", "a2", "a3",
+  "zero", "at", "v0", "v1", "a0", "a1", "a2", "a3", 
   "t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7",
-  "s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7",
+  "s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7", 
   "t8", "t9", "k0", "k1", "gp", "sp", "s8", "ra"
 };
 
 const char *c0reg[32] = {
-  "inx", "rand", "tlblo", "bpc", "ctxt", "bda", "pidmask",
-  "dcic", "badvaddr", "bdam", "tlbhi", "bpcm", "sr", "cause",
-  "epc", "prid", "erreg", "r17", "r18", "r19", "r20", "r21",
-  "r22", "r23", "r24", "r25", "r26", "r27", "r28", "r29", "r30",
-  "r31"
+  "inx", "rand", "tlblo", "bpc", "ctxt", "bda", "pidmask", "dcic", 
+  "badvaddr", "bdam", "tlbhi", "bpcm", "sr", "cause", "epc", "prid", "erreg", 
+  "r17", "r18", "r19", "r20", "r21", "r22", "r23", "r24", "r25", 
+  "r26", "r27", "r28", "r29", "r30", "r31"
 };
 
 const char *c2dreg[32] = {
@@ -206,28 +205,22 @@ static void dis_r(unsigned long data)
   case 6:
     switch(code4){
     case 0:
-      printf("tge %s, %s\n", reg[(data >> 21) & 0x1f], 
-        reg[(data >> 16) & 0x1f]);
+      printf("tge %s, %s\n", reg[(data >> 21) & 0x1f], reg[(data >> 16) & 0x1f]);
       break;
     case 1:
-      printf("tgeu %s, %s\n", reg[(data >> 21) & 0x1f], 
-        reg[(data >> 16) & 0x1f]);
+      printf("tgeu %s, %s\n", reg[(data >> 21) & 0x1f], reg[(data >> 16) & 0x1f]);
       break;
     case 2:
-      printf("tlt %s, %s\n", reg[(data >> 21) & 0x1f], 
-        reg[(data >> 16) & 0x1f]);
+      printf("tlt %s, %s\n", reg[(data >> 21) & 0x1f], reg[(data >> 16) & 0x1f]);
       break;
     case 3:
-      printf("tltu %s, %s\n", reg[(data >> 21) & 0x1f], 
-        reg[(data >> 16) & 0x1f]);
+      printf("tltu %s, %s\n", reg[(data >> 21) & 0x1f], reg[(data >> 16) & 0x1f]);
       break;
     case 4:
-      printf("teq %s, %s\n", reg[(data >> 21) & 0x1f], 
-        reg[(data >> 16) & 0x1f]);
+      printf("teq %s, %s\n", reg[(data >> 21) & 0x1f], reg[(data >> 16) & 0x1f]);
       break;
     case 6:
-      printf("tne %s, %s\n", reg[(data >> 21) & 0x1f], 
-        reg[(data >> 16) & 0x1f]);
+      printf("tne %s, %s\n", reg[(data >> 21) & 0x1f], reg[(data >> 16) & 0x1f]);
       break;
     default:
       printf("0x%x\n", data);
