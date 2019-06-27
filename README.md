@@ -1,15 +1,15 @@
 # Tiny MIPS Disassembler
   
 ## Introduction
-If you are looking for a tiny mips disassembler, this is what you want.
-Enjoy !
-
+If you are looking for a tiny mips disassembler, this is what you want.  
+Enjoy !  
+  
 ## How to build
-$ make 
-
+$ make  
+  
 ## How to do disassembly
-$ disasm xxx.bin
-
+$ disasm xxx.bin  
+  
 ## Website
 -  https://steward-fu.github.io/website/index.htm
 
